@@ -1,0 +1,53 @@
+What Happens When You Type "google.com" in Your Browser and Press Enter?
+
+A web browser is an application that allows a computer user to access the internet. One of its primary benefits is that it enables us to navigate the vast resources available online. When you type "google.com" into your web browser and press Enter, several background processes are carried out to load the webpage.
+
+Although we enter a domain name or canonical name, the internet actually communicates using IP addresses. Domain names are implemented because they are easier for humans to remember compared to numerical IP addresses. If an IP address is typed into the browser instead of a domain name, the response may indicate that the connection is not secure and sometimes shows the response that the site can’t be reached.
+
+
+Here is a step-by-step explanation of what happens when you type "google.com" and press Enter:
+
+1. DNS Lookup:
+	When you type "google.com" into your browser, the first step is to translate this domain name into an IP address. This process is called DNS (Domain Name System) lookup. DNS stands for Domain Name System. It is often referred to as the "phonebook of the internet" because it translates human-readable domain names (like google.com) into machine-readable IP addresses (like 172.217.6.46).
+
+	This system is crucial for the functioning of the internet as it enables users to access websites using easily memorable names instead of having to remember complex numerical IP addresses. The browser checks its local cache to see if it has recently requested this domain. If not, it queries a DNS resolver, usually provided by your ISP (Internet Service Provider) or a third-party DNS service like Google Public DNS or Cloudflare DNS.
+
+	The DNS resolver then queries other DNS servers in a hierarchical manner, starting from the root DNS servers, then the TLD (Top Level Domain) servers (for .com in this case), and finally the authoritative DNS servers for "google.com". These authoritative servers, managed by Google, return the IP address associated with "google.com".
+
+
+2. Establishing a Connection:
+	Once the IP address (e.g., 172.217.6.46) is obtained, the browser initiates a connection to the Google server using this IP address. This involves a process called a TCP (Transmission Control Protocol) handshake, where the browser and the Google server establish a connection to communicate.
+
+
+3. HTTPS Request:
+	After the connection is established, the browser sends an HTTPS (Hypertext Transfer Protocol Secure) request to the Google server. This request asks the server to send the content of the webpage at "google.com". HTTPS ensures that the data transferred between the browser and the server is encrypted and secure.
+
+	The Google server involved here is typically part of a vast network of servers (Google's global data centers) designed to handle requests efficiently. Load balancers are used to distribute incoming traffic across multiple servers to ensure reliability and speed. Monitoring systems continuously track the health and performance of these servers and services, providing real-time insights into their operation.
+
+
+4. Server Response:
+	The Google server receives the HTTPS request and processes it. It then sends back an HTTPS response, which includes the HTML (Hypertext Markup Language) content, CSS (Cascading Style Sheets), JavaScript files, images, and other resources required to display the webpage.
+
+	The server response includes headers, which provide meta-information about the response, such as content type and caching policies, and the body, which contains the actual content to be displayed.
+
+
+5. Rendering the Page:
+	The browser receives the response from the Google server and starts rendering the page. It interprets the HTML, applies the CSS for styling, and executes any JavaScript for dynamic content. The browser then displays the webpage on the user's screen.
+
+	During this process, the browser may make additional requests for resources referenced in the HTML document, such as images, stylesheets, and scripts. These requests may also go to the Google servers or to Content Delivery Networks (CDNs) that host these resources.
+
+
+6. Additional Processes:
+	As the page loads, the browser performs additional tasks such as checking for cookies, which are small pieces of data stored on the user's device by websites to track user activity and preferences. Cookies can store various types of information, including user authentication tokens, site preferences, and shopping cart contents.
+
+The browser also runs security checks, such as verifying SSL/TLS certificates to ensure the connection is secure. SSL (Secure Sockets Layer) and TLS (Transport Layer Security) are cryptographic protocols used to establish secure communication over the internet, encrypting data exchanged between the browser and the server to prevent eavesdropping and tampering.
+
+Additionally, the browser fetches any additional resources referenced by the initial HTML document, such as external scripts or style sheets, to fully render the webpage and provide a seamless user experience.
+
+This entire process happens very quickly, often within a fraction of a second, giving users the impression of instant access to the website. The efficiency and speed of these processes are the result of numerous optimizations and technologies working seamlessly in the background.
+
+
+In summary, when you type "google.com" into your web browser and press Enter, a complex series of actions takes place, including DNS lookup to find the IP address of Google's servers, establishing a secure connection, sending an HTTPS request, receiving a response from Google's servers, and rendering the webpage, all to provide you with the content you requested.
+
+Copy or click on the link below to access the document.
+https://docs.google.com/document/d/1LDzx8RxdnNyUjEhKztDhQTpsE-NlX4jMjSWkEFkcALY/edit?usp=sharing
