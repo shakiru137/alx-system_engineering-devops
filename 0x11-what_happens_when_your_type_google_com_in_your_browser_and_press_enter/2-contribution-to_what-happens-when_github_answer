@@ -1,0 +1,2 @@
+ when you type "google.com" into your web browser and press Enter, a complex series of actions takes place, including DNS lookup to find the IP address of Google's servers, establishing a secure connection, sending an HTTPS request, receiving a response from Google's servers, and rendering the webpage, all to provide you with the content you requested.
+https://github.com/shakiru137/what-happens-when.git
