@@ -7,13 +7,16 @@ returns information about his/her TODO list progress.
 import requests
 import sys
 
+
 def get_user_info(EMPLOYEE_ID):
     """
     Function to get the USER INFO by USER ID
     """
     try:
         """ Fetch all the employee data from the url """
-        response = requests.get(f'https://jsonplaceholder.typicode.com/users/{EMPLOYEE_ID}')
+        response = requests.get(
+                f'https://jsonplaceholder.typicode.com/users/{EMPLOYEE_ID}'
+                )
         response.raise_for_status()
         employee_data = response.json()
 
@@ -21,20 +24,24 @@ def get_user_info(EMPLOYEE_ID):
         employee_name = employee_data.get('name')
 
         """ Fet the employee TODO list data """
-        todo_response = requests.get(f'https://jsonplaceholder.typicode.com/todos?userId={EMPLOYEE_ID}')
+        todo_response = requests.get(
+            f'https://jsonplaceholder.typicode.com/todos?userId={EMPLOYEE_ID}'
+                )
         todo_response.raise_for_status()
         todo_data = todo_response.json()
 
         """ Get the number of tasks """
         total_tasks = len(todo_data)
+        t = total_tasks
 
         """ Get the number of completed task/tasks """
         completed_tasks = [task for task in todo_data if task.get('completed')]
 
-        num_of_done_tasks = len(completed_tasks)
+        num_of_tasks_done = len(completed_tasks)
+        n = num_of_tasks_done
 
         """ Displaying the results """
-        print(f"Employee {employee_name} is done with tasks ({num_of_done_tasks}/{total_tasks}):")
+        print(f"Employee {employee_name} is done with tasks({n}/{t}):")
 
         """ Displaying title of each task """
         for task in completed_tasks:
@@ -42,6 +49,7 @@ def get_user_info(EMPLOYEE_ID):
 
     except requests.RequestException as e:
         print(f"Error: {e}")
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
