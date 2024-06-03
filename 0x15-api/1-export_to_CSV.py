@@ -4,9 +4,9 @@ A Python script that, using this REST API,
 for a given employee ID,
 returns information about his/her TODO list progress.
 """
+import csv
 import requests
 import sys
-import csv
 
 
 def get_user_info(EMPLOYEE_ID):
